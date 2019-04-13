@@ -97,4 +97,12 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+  #Use color in STDOUT
+  config.color = true
+
+  #Use color not only is STDOUT but also in pagers and files
+  config.tty = true
+
+  #Use the specified formatter
+  config.formatter = :documentation # :progress, :html, :textmate
 end
