@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
-%w[rspec rspec-core rspec-expectations rspec-mocks rspec-support].each do |lib|
-    gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
-end
+gem 'activerecord'
+gem 'standalone_migrations' #it allows us to execute rake tasks related to migrations, like we do with the Rails standard tasks
+gem 'pg'
+gem 'rspec'
