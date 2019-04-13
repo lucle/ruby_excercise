@@ -27,9 +27,7 @@ data = Object.new
 quantity, total = 1, 0
 selected_items.each do |item|
     hash.each do |k,v|
-        if k == item.product_code
-            quantity = v
-        end
+        quantity = v if k == item.product_code
     end
     data = Checkout.new(item, quantity)
     total += data.get_price()

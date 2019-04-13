@@ -14,29 +14,16 @@ class Checkout
 
     def calculate_price(total_price)
         result = 0
-        if total_price > 60 
-            result = total_price - (total_price*10)/100
-        else
-            result = total_price    
-        end
-        result.round(2)
+        result = (total_price > 60 ) ? (total_price - (total_price*10)/100 ).round(2) :  total_price.round(2)
     end
 
     def hasOver2LavenderItem
         result = false
-        if (@name).downcase == 'lavender heart' && @quantity >=2
-            result = true
-        end
-        result
+        result = true  if (@name).downcase == 'lavender heart' && @quantity >= 2
     end
 
     def price_drop
         price = 0
-        if (@name).downcase == 'lavender heart' && @quantity >=2
-            price = 8.50
-        else 
-            price = @price
-        end
-        price
+        price = ((@name).downcase == 'lavender heart' && @quantity >= 2 ) ? 8.50 :  @price
     end
 end
