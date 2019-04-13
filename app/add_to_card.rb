@@ -1,6 +1,5 @@
 require 'active_record'
 require_relative './models/product'
-require './lib/calculation_price'
 require './lib/common'
 require './lib/checkout'
  
