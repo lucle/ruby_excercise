@@ -1,8 +1,8 @@
 require 'active_record'
 require_relative './models/product'
-require './lib/common'
+require './common/common'
+require './common/constants'
 require './lib/checkout'
-require './lib/constants'
  
 def db_configuration
     db_configuration_file = File.join(File.expand_path('..', __FILE__), '..', 'db', 'config.yml')
